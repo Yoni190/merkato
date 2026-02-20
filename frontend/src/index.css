@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: 'share-tech';
+    src: local('share-tech'), url(./fonts/ShareTech-Regular.ttf) format('truetype');
+}
+
+* {
+    font-family: 'share-tech', Arial, Helvetica, sans-serif;
+}
