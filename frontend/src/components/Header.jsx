@@ -2,7 +2,7 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <div className='grid grid-cols-3 p-4 bg-linear-to-r from-green-500 to-green-800 text-white'>
+    <header className='grid grid-cols-3 p-4 bg-linear-to-r from-green-500 to-green-800 text-white'>
         {/* Logo */}
         <h1 className='text-4xl flex items-center'>
             Merkato
@@ -28,7 +28,7 @@ const Header = () => {
                 Log In
             </button>
         </div>
-    </div>
+    </header>
   )
 }
 
