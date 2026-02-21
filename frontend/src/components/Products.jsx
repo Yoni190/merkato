@@ -2,7 +2,7 @@ import React from 'react'
 
 const Products = ({ product }) => {
   return (
-   <div className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden w-64">
+   <div className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden w-64 mb-5">
 
   {/* Image Section */}
   <div className="bg-gray-100 flex items-center justify-center h-56 overflow-hidden">
