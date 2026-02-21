@@ -1,8 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Products = ({ product }) => {
   return (
-   <div className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden w-64 mb-5">
+   <Link to={'/product-details'} className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden w-64 mb-5">
 
   {/* Image Section */}
   <div className="bg-gray-100 flex items-center justify-center h-56 overflow-hidden">
@@ -29,7 +30,7 @@ const Products = ({ product }) => {
       </button>
     </div>
   </div>
-</div>
+</Link>
   )
 }
 

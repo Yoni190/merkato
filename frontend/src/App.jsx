@@ -7,6 +7,7 @@ import Login from './pages/Login'
 import Signup from './pages/Signup'
 import MainLayout from './MainLayout'
 import Category from './pages/Category'
+import ProductDetails from './pages/ProductDetails'
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Signup />} />
           <Route path='/category' element={<Category />} />
+          <Route path='/product-details' element={<ProductDetails />} />
         </Route>
       </Routes>
     </BrowserRouter>
