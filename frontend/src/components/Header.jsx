@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 
 const Header = () => {
   return (
@@ -23,10 +25,11 @@ const Header = () => {
                 className='border rounded py-2 px-3 bg-white text-black hover:cursor-pointer hover:bg-gray-200'>
                 Sign Up
             </button>
-            <button 
-                className='border rounded py-2 px-4 bg-gray-900 text-white hover:cursor-pointer hover:bg-gray-700'>
+            <Link 
+                to={'/login'}
+                className='border rounded py-2 px-4 bg-gray-900 text-white hover:bg-gray-700'>
                 Log In
-            </button>
+            </Link>
         </div>
     </header>
   )
