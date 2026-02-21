@@ -1,5 +1,6 @@
 import React from 'react'
 import IPhone from '../assets/iphone_17.png'
+import { Link } from 'react-router-dom'
 
 const OrderSummary = () => {
   const products = [
@@ -107,9 +108,9 @@ const OrderSummary = () => {
             </span>
           </div>
 
-          <button className="w-full mt-8 py-3 rounded-xl bg-green-600 text-white font-semibold shadow-md hover:bg-green-700 hover:shadow-lg transition-all duration-300">
+          <Link to={'/order-successful'} className="w-full mt-8 py-3 rounded-xl bg-green-600 text-white font-semibold shadow-md hover:bg-green-700 hover:shadow-lg transition-all duration-300 flex justify-center">
             Confirm Order
-          </button>
+          </Link>
         </aside>
 
       </div>

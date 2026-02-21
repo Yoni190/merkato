@@ -12,6 +12,7 @@ import Favorites from './pages/Favorites'
 import Cart from './pages/Cart'
 import Address from './pages/Address'
 import OrderSummary from './pages/OrderSummary'
+import OrderSuccessful from './pages/OrderSuccessful'
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path='/cart' element={<Cart />} />
           <Route path='/address' element={<Address />} />
           <Route path='/order-summary' element={<OrderSummary />} />
+          <Route path='/order-successful' element={<OrderSuccessful />} />
         </Route>
       </Routes>
     </BrowserRouter>
