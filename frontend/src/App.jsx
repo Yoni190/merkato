@@ -8,6 +8,7 @@ import Signup from './pages/Signup'
 import MainLayout from './MainLayout'
 import Category from './pages/Category'
 import ProductDetails from './pages/ProductDetails'
+import Favorites from './pages/Favorites'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path='/signup' element={<Signup />} />
           <Route path='/category' element={<Category />} />
           <Route path='/product-details' element={<ProductDetails />} />
+          <Route path='/favorites' element={<Favorites />} />
         </Route>
       </Routes>
     </BrowserRouter>
