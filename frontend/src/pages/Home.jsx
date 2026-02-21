@@ -32,7 +32,6 @@ const Home = () => {
 ]
   return (
     <div>
-        <Header />
         <Hero />
         <Categories />
         {dummyData.map((data, i) => 
@@ -41,7 +40,6 @@ const Home = () => {
             title={data.title}
             products={data.products} />
         )}
-        <Footer />
     </div>
   )
 }

@@ -21,10 +21,11 @@ const Header = () => {
         </div>
 
         <div className='flex justify-center gap-5'>
-            <button
+            <Link 
+                to={'/signup'}
                 className='border rounded py-2 px-3 bg-white text-black hover:cursor-pointer hover:bg-gray-200'>
                 Sign Up
-            </button>
+            </Link>
             <Link 
                 to={'/login'}
                 className='border rounded py-2 px-4 bg-gray-900 text-white hover:bg-gray-700'>
