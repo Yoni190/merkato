@@ -13,6 +13,7 @@ import Cart from './pages/Cart'
 import Address from './pages/Address'
 import OrderSummary from './pages/OrderSummary'
 import OrderSuccessful from './pages/OrderSuccessful'
+import AdminLogin from './pages/admin/Login'
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
           <Route path='/order-summary' element={<OrderSummary />} />
           <Route path='/order-successful' element={<OrderSuccessful />} />
         </Route>
+        <Route path='/admin/login' element={<AdminLogin />} />
       </Routes>
     </BrowserRouter>
   )
