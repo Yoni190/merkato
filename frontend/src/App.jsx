@@ -10,6 +10,7 @@ import Category from './pages/Category'
 import ProductDetails from './pages/ProductDetails'
 import Favorites from './pages/Favorites'
 import Cart from './pages/Cart'
+import Address from './pages/Address'
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path='/product-details' element={<ProductDetails />} />
           <Route path='/favorites' element={<Favorites />} />
           <Route path='/cart' element={<Cart />} />
+          <Route path='/address' element={<Address />} />
         </Route>
       </Routes>
     </BrowserRouter>

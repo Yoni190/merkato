@@ -131,7 +131,7 @@ const Cart = () => {
             </div>
 
             <div className='flex flex-col'>
-                <Link className="w-full mt-6 px-4 py-3 bg-green-600 text-white rounded-xl font-semibold shadow hover:bg-green-700 transition hover:cursor-pointer text-center">
+                <Link to={'/address'} className="w-full mt-6 px-4 py-3 bg-green-600 text-white rounded-xl font-semibold shadow hover:bg-green-700 transition hover:cursor-pointer text-center">
                   Checkout
                 </Link>
                 <Link to={'/'} className="w-full mt-3 px-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-700 hover:bg-gray-50 transition hover:cursor-pointer text-center">
