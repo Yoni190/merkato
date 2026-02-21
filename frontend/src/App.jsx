@@ -11,6 +11,7 @@ import ProductDetails from './pages/ProductDetails'
 import Favorites from './pages/Favorites'
 import Cart from './pages/Cart'
 import Address from './pages/Address'
+import OrderSummary from './pages/OrderSummary'
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path='/favorites' element={<Favorites />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/address' element={<Address />} />
+          <Route path='/order-summary' element={<OrderSummary />} />
         </Route>
       </Routes>
     </BrowserRouter>

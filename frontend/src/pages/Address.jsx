@@ -86,6 +86,7 @@ const Address = () => {
 
           {/* Submit */}
           <Link
+            to={'/order-summary'}
             type="submit"
             className="w-full mt-4 py-3 rounded-xl bg-green-600 text-white font-semibold shadow-md hover:bg-green-700 hover:shadow-lg transition-all duration-300 hover:cursor-pointer flex justify-center"
           >
