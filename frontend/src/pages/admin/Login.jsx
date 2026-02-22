@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Login = () => {
   return (
@@ -45,12 +46,13 @@ const Login = () => {
             />
           </div>
 
-          <button
+          <Link
+            to={"/admin/home"}
             type="submit"
-            className="mt-4 py-3 rounded-xl bg-green-600 text-white font-semibold shadow-md hover:bg-green-700 hover:shadow-lg transition-all duration-300"
+            className="text-center mt-4 py-3 rounded-xl bg-green-600 text-white font-semibold shadow-md hover:bg-green-700 hover:shadow-lg transition-all duration-300"
           >
             Login
-          </button>
+          </Link>
 
         </form>
 

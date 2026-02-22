@@ -14,6 +14,8 @@ import Address from './pages/Address'
 import OrderSummary from './pages/OrderSummary'
 import OrderSuccessful from './pages/OrderSuccessful'
 import AdminLogin from './pages/admin/Login'
+import AdminHome from './pages/admin/Home'
+import AdminMainLayout from './AdminMainLayout'
 
 
 function App() {
@@ -35,6 +37,9 @@ function App() {
           <Route path='/order-successful' element={<OrderSuccessful />} />
         </Route>
         <Route path='/admin/login' element={<AdminLogin />} />
+        <Route element={<AdminMainLayout />}>
+          <Route path='/admin/home' element={<AdminHome />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   )
