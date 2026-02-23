@@ -19,6 +19,7 @@ import AdminMainLayout from './AdminMainLayout'
 import Categories from './pages/admin/categories/Categories'
 import AdminProducts from './pages/admin/products/Products'
 import AddCategory from './pages/admin/categories/AddCategory'
+import AddProduct from './pages/admin/products/AddProduct'
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
           <Route path='/admin/categories' element={<Categories />} />
           <Route path='/admin/products' element={<AdminProducts />} />
           <Route path='/admin/add-category' element={<AddCategory />} />
+          <Route path='/admin/add-product' element={<AddProduct />} />
         </Route>
       </Routes>
     </BrowserRouter>

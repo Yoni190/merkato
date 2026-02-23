@@ -1,5 +1,6 @@
 import React from 'react'
 import IPhone from '../../../assets/iphone_17.png'
+import { Link } from 'react-router-dom'
 
 const Products = () => {
      const products = [
@@ -23,9 +24,9 @@ const Products = () => {
             </p>
           </div>
 
-          <button className="px-4 py-2 text-sm font-medium text-white bg-black rounded-lg hover:bg-gray-800 transition">
+          <Link to={'/admin/add-product'} className="px-4 py-2 text-sm font-medium text-white bg-black rounded-lg hover:bg-gray-800 transition">
             Add
-          </button>
+          </Link>
         </div>
 
         {/* Table */}
