@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Categories = () => {
 
@@ -23,9 +24,9 @@ const Categories = () => {
             </p>
           </div>
 
-          <button className="px-4 py-2 text-sm font-medium text-white bg-black rounded-lg hover:bg-gray-800 transition">
+          <Link to={'/admin/add-category'} className="px-4 py-2 text-sm font-medium text-white bg-black rounded-lg hover:bg-gray-800 transition">
             Add
-          </button>
+          </Link>
         </div>
 
         {/* Table */}
