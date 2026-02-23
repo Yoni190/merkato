@@ -16,6 +16,7 @@ import OrderSuccessful from './pages/OrderSuccessful'
 import AdminLogin from './pages/admin/Login'
 import AdminHome from './pages/admin/Home'
 import AdminMainLayout from './AdminMainLayout'
+import Categories from './pages/admin/categories/Categories'
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
         <Route path='/admin/login' element={<AdminLogin />} />
         <Route element={<AdminMainLayout />}>
           <Route path='/admin/home' element={<AdminHome />} />
+          <Route path='/admin/categories' element={<Categories />} />
         </Route>
       </Routes>
     </BrowserRouter>
