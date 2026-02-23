@@ -1,6 +1,13 @@
 import React from 'react'
 
 const Categories = () => {
+
+  const categories = [
+    { id: 1, name: "Electronics", products: 50 },
+    { id: 2, name: "Home", products: 50 },
+    { id: 3, name: "Fashion", products: 32 },
+  ]
+
   return (
     <div className="p-8 bg-gray-50 min-h-screen">
       <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
@@ -16,9 +23,9 @@ const Categories = () => {
             </p>
           </div>
 
-          <div>
-            <button className='px-4 py-2 text-sm font-medium text-white bg-black rounded-lg hover:bg-gray-800 transition'>Add</button>
-          </div>
+          <button className="px-4 py-2 text-sm font-medium text-white bg-black rounded-lg hover:bg-gray-800 transition">
+            Add
+          </button>
         </div>
 
         {/* Table */}
@@ -34,25 +41,24 @@ const Categories = () => {
             </thead>
 
             <tbody className="text-gray-700">
-              <tr className="border-b hover:bg-gray-50 transition">
-                <td className="px-6 py-4 font-medium">Electronics</td>
-                <td className="px-6 py-4">50</td>
-                <td className="px-6 py-4 text-right">
-                  <button className="px-4 py-2 text-sm font-medium text-white bg-black rounded-lg hover:bg-gray-800 transition">
-                    Edit
-                  </button>
-                </td>
-              </tr>
-
-              <tr className="border-b hover:bg-gray-50 transition">
-                <td className="px-6 py-4 font-medium">Home</td>
-                <td className="px-6 py-4">50</td>
-                <td className="px-6 py-4 text-right">
-                  <button className="px-4 py-2 text-sm font-medium text-white bg-black rounded-lg hover:bg-gray-800 transition">
-                    Edit
-                  </button>
-                </td>
-              </tr>
+              {categories.map((category) => (
+                <tr
+                  key={category.id}
+                  className="border-b hover:bg-gray-50 transition"
+                >
+                  <td className="px-6 py-4 font-medium">
+                    {category.name}
+                  </td>
+                  <td className="px-6 py-4">
+                    {category.products}
+                  </td>
+                  <td className="px-6 py-4 text-right">
+                    <button className="px-4 py-2 text-sm font-medium text-white bg-black rounded-lg hover:bg-gray-800 transition">
+                      Edit
+                    </button>
+                  </td>
+                </tr>
+              ))}
             </tbody>
 
           </table>
