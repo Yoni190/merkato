@@ -18,6 +18,9 @@ const Sidebar = () => {
             <li>
               <Link to={'/admin/settings'}>Settings</Link>
             </li>
+            <li>
+              <Link to={'/admin/login'} className='border rounded bg-red-300 p-2 text-red-900'>Log Out</Link>
+            </li>
         </ul>
     </div>
   )
