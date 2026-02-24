@@ -54,9 +54,9 @@ const Categories = () => {
                     {category.products}
                   </td>
                   <td className="px-6 py-4 text-right">
-                    <button className="px-4 py-2 text-sm font-medium text-white bg-black rounded-lg hover:bg-gray-800 transition">
+                    <Link to={'/admin/edit-category'} className="px-4 py-2 text-sm font-medium text-white bg-black rounded-lg hover:bg-gray-800 transition">
                       Edit
-                    </button>
+                    </Link>
                   </td>
                 </tr>
               ))}
