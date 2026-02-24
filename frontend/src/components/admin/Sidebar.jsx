@@ -15,7 +15,9 @@ const Sidebar = () => {
               <Link to={'/admin/products'}>Products</Link>
             </li>
             <li>Users</li>
-            <li>Settings</li>
+            <li>
+              <Link to={'/admin/settings'}>Settings</Link>
+            </li>
         </ul>
     </div>
   )

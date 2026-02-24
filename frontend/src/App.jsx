@@ -22,6 +22,7 @@ import AddCategory from './pages/admin/categories/AddCategory'
 import AddProduct from './pages/admin/products/AddProduct'
 import EditCategory from './pages/admin/categories/EditCategory'
 import EditProducts from './pages/admin/products/EditProducts'
+import Settings from './pages/admin/Settings'
 
 
 function App() {
@@ -51,6 +52,7 @@ function App() {
           <Route path='/admin/edit-category' element={<EditCategory />} />
           <Route path='/admin/add-product' element={<AddProduct />} />
           <Route path='/admin/edit-product' element={<EditProducts />} />
+          <Route path='/admin/settings' element={<Settings />} />
         </Route>
       </Routes>
     </BrowserRouter>
