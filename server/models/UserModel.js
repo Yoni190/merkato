@@ -22,6 +22,10 @@ const UserSchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
+    orders: [{ type: mongoose.Schema.Types.ObjectId, red: 'Order'}],
+    reviews: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Review'}],
+    favorites: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Favorite'}],
+    cart: { type: mongoose.Schema.Types.ObjectId, ref: 'Cart'},
 })
 
 module.exports = mongoose.model('User', UserSchema)
