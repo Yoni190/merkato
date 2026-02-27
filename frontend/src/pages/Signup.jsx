@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 
@@ -13,6 +13,8 @@ const Signup = () => {
     })
 
     const [errors, setErrors] = useState({})
+
+    const navigate = useNavigate()
 
     const register = async (e) => {
         e.preventDefault()
@@ -43,7 +45,7 @@ const Signup = () => {
 
         try {
             const res = await axios.post('http://127.0.0.1:5000/register', formData)
-            console.log(res.data.message)
+            navigate('/')
         } catch (error) {
             const newError = { 'backendError': error.response.data.message }
             setErrors(newError)
