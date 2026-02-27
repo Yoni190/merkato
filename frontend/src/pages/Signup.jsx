@@ -45,7 +45,9 @@ const Signup = () => {
             const res = await axios.post('http://127.0.0.1:5000/register', formData)
             console.log(res.data.message)
         } catch (error) {
-            console.log(`Error: ${error}`)
+            const newError = { 'backendError': error.response.data.message }
+            setErrors(newError)
+            console.log(error.response.data.message)
         }
     }
   return (
@@ -93,9 +95,10 @@ const Signup = () => {
                     value={formData.password}
                     onChange={(e) => setFormData({...formData, password: e.target.value})} />
 
-                    {errors.password && <p className='text-red-600'>{errors.password}</p>}
+                    
 
-                <button className='border p-3 bg-green-600 text-white hover:cursor-pointer hover:bg-green-800 mb-3'>Sign Up</button>
+                <button className='border p-3 bg-green-600 text-white hover:cursor-pointer hover:bg-green-800'>Sign Up</button>
+                {errors.backendError && <p className='text-red-600 mb-3'>{errors.backendError}</p>}
             </form>
             <p className='text-center'>Already have an account? <Link to="/login" className='underline text-blue-500'>Login</Link></p>
         </div>
