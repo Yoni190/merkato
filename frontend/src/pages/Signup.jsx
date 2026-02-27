@@ -12,8 +12,34 @@ const Signup = () => {
         password: ''
     })
 
+    const [errors, setErrors] = useState({})
+
     const register = async (e) => {
         e.preventDefault()
+        setErrors({})
+
+        const newErrors = {}
+
+        if(!formData.f_name) {
+            newErrors.f_name = 'Please enter your first name'
+        }
+        if(!formData.l_name) {
+            newErrors.l_name = 'Please enter your last name'
+        }
+        if(!formData.email) {
+            newErrors.email = 'Please enter your email address'
+        }
+        if(!formData.password) {
+            newErrors.password = 'Please enter your password'
+        }
+        if(formData.password && formData.password.length < 8) {
+            newErrors.password = 'Password length must be at least 8 characters'
+        }
+
+        if(Object.keys(newErrors).length > 0) {
+            setErrors(newErrors)
+            return
+        }
 
         try {
             const res = await axios.post('http://127.0.0.1:5000/register', formData)
@@ -36,6 +62,8 @@ const Signup = () => {
                     placeholder='First Name'
                     value={formData.f_name}
                     onChange={(e) => setFormData({...formData, f_name: e.target.value})} />
+
+                    {errors.f_name && <p className='text-red-600'>{errors.f_name}</p>}
                 <input
                     type="text"
                     name="l_name"
@@ -44,6 +72,8 @@ const Signup = () => {
                     placeholder='Last Name' 
                     value={formData.l_name}
                     onChange={(e) => setFormData({...formData, l_name: e.target.value})} />
+
+                    {errors.l_name && <p className='text-red-600'>{errors.l_name}</p>}
                 <input
                     type="email"
                     name="email"
@@ -52,6 +82,8 @@ const Signup = () => {
                     placeholder='Email Address'
                     value={formData.email}
                     onChange={(e) => setFormData({...formData, email: e.target.value})} />
+
+                    {errors.email && <p className='text-red-600'>{errors.email}</p>}
                 <input
                     type="password"
                     name="password"
@@ -60,6 +92,8 @@ const Signup = () => {
                     placeholder='Password'
                     value={formData.password}
                     onChange={(e) => setFormData({...formData, password: e.target.value})} />
+
+                    {errors.password && <p className='text-red-600'>{errors.password}</p>}
 
                 <button className='border p-3 bg-green-600 text-white hover:cursor-pointer hover:bg-green-800 mb-3'>Sign Up</button>
             </form>
